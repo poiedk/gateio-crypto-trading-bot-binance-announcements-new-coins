@@ -21,6 +21,6 @@ COPY auth/auth.yml ./auth/
 WORKDIR .
 
 # install necessary requirements
-RUN install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 CMD [ "python", "main.py"]
