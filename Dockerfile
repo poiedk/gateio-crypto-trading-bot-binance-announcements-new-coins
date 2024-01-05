@@ -20,6 +20,10 @@ COPY auth/auth.yml ./auth/
 #root directory contains main.py to start the bot as well as all config/auth.yml files
 WORKDIR .
 
+#Upgrade setuptools and pip
+RUN pip install --upgrade setuptools && \
+    pip install --upgrade pip
+
 # install necessary requirements
 RUN pip3 install --no-cache-dir -r requirements.txt
 
