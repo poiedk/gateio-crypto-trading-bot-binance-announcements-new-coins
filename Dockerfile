@@ -21,8 +21,8 @@ COPY auth/auth.yml ./auth/
 WORKDIR .
 
 #Upgrade setuptools and pip
-RUN pip install --upgrade setuptools && \
-    pip install --upgrade pip
+# RUN pip install --upgrade setuptools && \
+#     pip install --upgrade pip
 
 # install necessary requirements
 RUN pip3 install --no-cache-dir -r requirements.txt
